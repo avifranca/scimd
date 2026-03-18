@@ -4,6 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Spec Version](https://img.shields.io/badge/spec-v0.1.0-green.svg)](spec/SPECIFICATION.md)
+[![DOI](https://zenodo.org/badge/1184924320.svg)](https://doi.org/10.5281/zenodo.19080882)
 
 ---
 
