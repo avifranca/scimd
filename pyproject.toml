@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "scimd"
+name = "pyscimd"
 version = "0.1.0"
 description = "SciMD — Scientific Markdown for the AI Era"
 readme = "README.md"
