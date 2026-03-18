@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scimd"
+version = "0.1.0"
+description = "SciMD — Scientific Markdown for the AI Era"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Juan Francisco Avilés Calderón", email = "your@email.com" }
+]
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0"]
+
+[project.scripts]
+scimd = "scimd_parser:main"
+scimd-validate = "scimd_validator:main"
+
+[project.urls]
+Homepage = "https://github.com/franavical/scimd"
