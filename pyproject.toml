@@ -19,4 +19,4 @@ scimd = "scimd_parser:main"
 scimd-validate = "scimd_validator:main"
 
 [project.urls]
-Homepage = "https://github.com/franavical/scimd"
+Homepage = "https://github.com/avifranca/scimd"
