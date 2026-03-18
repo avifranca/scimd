@@ -22,10 +22,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
-        run: |
-          pip install hatchling
-          pip install -e .
-          pip install pytest
+        run: pip install PyYAML pytest
 
       - name: Run tests
         run: pytest tests/ -v
