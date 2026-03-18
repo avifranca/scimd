@@ -9,7 +9,7 @@ description = "SciMD — Scientific Markdown for the AI Era"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
-  { name = "Juan Francisco Avilés Calderón", email = "your@email.com" }
+  { name = "Juan Francisco Avilés Calderón", email = "avilesfran21@gmail.com" }
 ]
 requires-python = ">=3.10"
 dependencies = ["PyYAML>=6.0"]
