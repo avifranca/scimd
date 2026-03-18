@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "SciMD — Scientific Markdown for the AI Era"
+message: "If you use SciMD in your research or software, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Avilés Calderón"
+    given-names: "Juan Francisco"
+    email: "avilesfran21@gmail.com"
+repository-code: "https://github.com/avifranca/scimd"
+url: "https://github.com/avifranca/scimd"
+abstract: >
+  SciMD is an open-source plain-text document format and reference implementation
+  designed for scientific and technical writing in the AI era. It enables
+  AI-readable scientific papers with structured charts, diagrams, equations,
+  and semantic sections optimized for RAG pipelines and LLM training.
+keywords:
+  - scientific-writing
+  - document-format
+  - markdown
+  - ai
+  - rag
+  - llm
+  - plain-text
+license: MIT
+version: "0.1.0"
+date-released: "2026-03-17"

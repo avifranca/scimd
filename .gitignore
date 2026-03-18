@@ -1,0 +1,25 @@
+# Private working notes
+docs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.venv/
+venv/
+
+# Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Personal workspace
+.claude/
+
