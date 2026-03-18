@@ -2,7 +2,7 @@
 
 > **Status**: Draft  
 > **Date**: 2026-03-17  
-> **Authors**: Community  
+> **Authors**: Juan Francisco Avilés Calderón  
 > **License**: MIT
 
 ---
@@ -156,6 +156,7 @@ $$
 ```
 
 Rules:
+
 - Inline math MUST NOT contain newlines
 - Block math SHOULD use the `::equation` wrapper for labeling and referencing
 - LaTeX packages are limited to: amsmath, amssymb, amsfonts, mathtools
@@ -273,7 +274,9 @@ graph TD
     B -->|Yes| C[Action 1]
     B -->|No| D[Action 2]
 ```
+
 ::enddiagram
+
 ```
 
 ### 7.2 Diagram Rules
