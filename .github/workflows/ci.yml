@@ -23,7 +23,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install PyYAML pytest
+          pip install hatchling
+          pip install -e .
+          pip install pytest
 
       - name: Run tests
         run: pytest tests/ -v
