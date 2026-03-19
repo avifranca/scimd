@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pyscimd"
-version = "0.1.1"
+version = "0.1.2"
 description = "SciMD — Scientific Markdown for the AI Era"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -13,6 +13,9 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = ["PyYAML>=6.0"]
+
+[tool.hatch.build.targets.wheel]
+include = ["scimd_parser.py", "scimd_validator.py"]
 
 [project.scripts]
 scimd = "scimd_parser:main"
