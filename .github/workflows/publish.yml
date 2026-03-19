@@ -6,24 +6,35 @@ on:
       - "v*"
 
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install and test
+        run: |
+          pip install --upgrade pip
+          pip install ".[dev]"
+          pytest tests/ -v
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install build tools
-        run: pip install hatchling build
-
+        run: |
+          pip install --upgrade pip
+          pip install hatchling build
       - name: Build package
         run: python -m build
-
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1

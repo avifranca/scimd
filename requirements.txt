@@ -1,1 +1,4 @@
+# Install all dependencies via: pip install -e ".[dev]"
+# This file is kept for compatibility only.
 PyYAML>=6.0
+pytest

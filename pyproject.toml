@@ -13,6 +13,23 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = ["PyYAML>=6.0"]
+keywords = ["scientific", "markdown", "parser", "RAG", "AI", "document-format"]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Text Processing :: Markup",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
 
 [tool.hatch.build.targets.wheel]
 include = ["scimd_parser.py", "scimd_validator.py"]
