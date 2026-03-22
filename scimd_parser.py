@@ -115,7 +115,19 @@ class Section:
 
     @property
     def text_content(self) -> str:
-        """Return plain text content with interpretations inlined."""
+        """Return plain text content with interpretations and equations inlined.
+
+        Inlines, in order:
+        - Prose content (``section.content``)
+        - Chart interpretations
+        - Figure descriptions and interpretations
+        - Diagram descriptions
+        - Equations with their LaTeX and semantic label
+        - Callout content
+
+        This is the field consumed by ``to_rag_chunks()`` and used as the
+        basis for ``build_training_text()``.
+        """
         parts = [self.content]
         for chart in self.charts:
             if chart.interpretation:
@@ -128,7 +140,45 @@ class Section:
         for diag in self.diagrams:
             if diag.description:
                 parts.append(f"[Diagram {diag.id}]: {diag.description}")
+        for eq in self.equations:
+            eq_line = f"[Equation #{eq.id}]: ${eq.latex}$"
+            if eq.label:
+                eq_line += f'  "{eq.label}"'
+            parts.append(eq_line)
+        for callout in self.callouts:
+            if callout.content:
+                parts.append(f"[{callout.type.upper()}]: {callout.content}")
         return "\n\n".join(parts)
+
+    def build_training_text(self) -> str:
+        """Return a training-optimised text representation of this section.
+
+        This method is **additive** — it does not replace ``text_content`` or
+        alter ``to_rag_chunks()`` output.  It is intended for use when
+        assembling fine-tuning datasets or human-readable training examples
+        where every structured element (equation, figure, chart, diagram,
+        callout) should appear in a single coherent prose stream.
+
+        The output format is::
+
+            <prose content>
+
+            [Equation #eq-id]: $<latex>$  "<semantic label>"
+
+            [Figure fig-id]: <description>
+
+            [Figure fig-id interpretation]: <interpretation>
+
+            [Chart chart-id]: <interpretation>
+
+            [Diagram diag-id]: <description>
+
+            [NOTE]: <callout content>
+
+        Returns:
+            Merged training text as a single string.
+        """
+        return self.text_content
 
 
 @dataclass
@@ -176,6 +226,50 @@ class SciMDDocument:
     def dependency_graph(self) -> dict[str, list[str]]:
         """Return section dependency graph as adjacency list."""
         return {s.id: s.depends_on for s in self.sections}
+
+    def build_training_text(self, include_metadata: bool = True) -> str:
+        """Return a full-document training text suitable for LLM fine-tuning.
+
+        Concatenates every section's ``build_training_text()`` output in order,
+        prefixed with an optional metadata header drawn from the YAML frontmatter.
+
+        This method is **additive** — it does not modify ``to_rag_chunks()``
+        or any existing properties.
+
+        Args:
+            include_metadata: If True (default), prepend a metadata block
+                containing the document title, authors, date, and abstract.
+                Set to False when you need bare training text without headers.
+
+        Returns:
+            A single string ready for use as a training example.
+        """
+        parts: list[str] = []
+
+        if include_metadata:
+            meta_lines = [f"# {self.title}"] if self.title else []
+            if self.authors:
+                author_names = ", ".join(a.name for a in self.authors)
+                meta_lines.append(f"**Authors:** {author_names}")
+            if self.date:
+                meta_lines.append(f"**Date:** {self.date}")
+            if self.keywords:
+                meta_lines.append(f"**Keywords:** {', '.join(self.keywords)}")
+            if self.abstract:
+                meta_lines.append(f"\n**Abstract:** {self.abstract.strip()}")
+            if meta_lines:
+                parts.append("\n".join(meta_lines))
+
+        for section in self.sections:
+            section_parts: list[str] = []
+            if section.title:
+                section_parts.append(f"## {section.title}")
+            if section.summary:
+                section_parts.append(f"*{section.summary}*")
+            section_parts.append(section.build_training_text())
+            parts.append("\n\n".join(section_parts))
+
+        return "\n\n---\n\n".join(parts)
 
     def to_rag_chunks(self) -> list[dict]:
         """
@@ -536,7 +630,7 @@ def main():
     import sys
 
     if len(sys.argv) < 2:
-        print("Usage: python scimd_parser.py <file.smd> [--rag-chunks | --json]")
+        print("Usage: python scimd_parser.py <file.smd> [--rag-chunks | --json | --training-text]")
         sys.exit(1)
 
     filepath = sys.argv[1]
@@ -545,6 +639,9 @@ def main():
     if "--rag-chunks" in sys.argv:
         chunks = doc.to_rag_chunks()
         print(json.dumps(chunks, indent=2, ensure_ascii=False))
+    elif "--training-text" in sys.argv:
+        no_meta = "--no-metadata" in sys.argv
+        print(doc.build_training_text(include_metadata=not no_meta))
     elif "--json" in sys.argv:
         # Full document structure as JSON
         import dataclasses
