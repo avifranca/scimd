@@ -3,7 +3,7 @@
 > **An open document format designed for humans to write, machines to understand, and science to advance.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Spec Version](https://img.shields.io/badge/spec-v0.1.0-green.svg)](spec/SPECIFICATION.md)
+[![Spec Version](https://img.shields.io/badge/spec-v0.1.0-green.svg)](SPECIFICATION.md)
 [![DOI](https://zenodo.org/badge/1184924320.svg)](https://doi.org/10.5281/zenodo.19080882)
 
 ---
@@ -34,6 +34,49 @@ The result: AI models hallucinate, RAG systems retrieve noise, and training pipe
 | Diagram ambiguity | MermaidJS source code + author description |
 | Missing context | Structured metadata at document and section level |
 | Training noise | Sequential, predictable structure from authoring |
+
+## Benchmark Results
+
+Independent agent benchmark across 2 scientific papers (marine biology + astrophysics), each evaluated in 4 formats: SciMD, JATS XML, HTML/LaTeXML, and PDF-extracted Markdown (docling/PyMuPDF).
+
+**Verdict: SciMD wins for both LLM training and RAG.**
+
+> SciMD delivers 85% of the scientific information at 17–22% of the file size of JATS XML or LaTeXML HTML, with unique structural affordances that none of the alternatives provide.
+
+### Format Comparison
+
+| Metric | SciMD | JATS XML | HTML (LaTeXML) | PDF-MD (docling) |
+|---|---|---|---|---|
+| **File size (vs SciMD)** | 1× | 4.5× | 6× | 0.3–0.4× |
+| **Structured metadata** | ✅ Rich YAML | ✅ Rich (verbose) | ⚠️ Embedded | ❌ Prose-only |
+| **Section semantic summaries** | ✅ Hand-written `summary:` | ❌ | ❌ | ❌ |
+| **Section dependency graph** | ✅ `depends_on:` | ❌ | ❌ | ❌ |
+| **Inline equations** | ✅ Clean LaTeX | ✅ Clean LaTeX | ⚠️ MathML + attr | ❌ `<!-- formula-not-decoded -->` |
+| **Equation semantic labels** | ✅ `::label` per equation | ❌ | ❌ | ❌ |
+| **Table interpretation** | ✅ `::interpretation` block | ❌ Caption only | ❌ Caption only | ❌ |
+| **Figure descriptions** | ✅ Rich description + interpretation | ❌ Short caption | ⚠️ Verbatim caption | ❌ `<!-- image -->` |
+| **Usable as raw training text** | ✅ Directly | ⚠️ After tag stripping | ❌ Tag density too high | ✅ But equations missing |
+| **Usable as RAG chunk source** | ✅ Excellent | ⚠️ After processing | ❌ Blob structure | ⚠️ Decent prose only |
+| **Document noise ratio** | Very Low | Moderate | High | Very Low |
+
+### Final Ranking
+
+| Rank | Format + Pipeline | RAG | Training |
+|---|---|---|---|
+| 🥇 1 | **SciMD + scimd_parser** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| 🥈 2 | **SciMD (raw text)** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| 🥉 3 | **PDF-MD + pix2tex** | ⭐⭐⭐ | ⭐⭐⭐ |
+| 4 | **JATS XML + tag stripper** | ⭐⭐ | ⭐⭐ |
+| 5 | **PDF-MD (no formulas)** | ⭐⭐ | ⭐⭐ |
+| 6 | **HTML (LaTeXML)** | ⭐ | ⭐ |
+
+**What makes SciMD uniquely effective:** Four structural affordances that no alternative format provides — section-level semantic summaries (`::meta summary:`), inter-section dependency graphs (`depends_on:`), equation semantic labels (`::label`), and rich figure interpretations (`::interpretation`). These are high-value signals for training and retrieval that cannot be recovered by parsing PDF or XML after the fact.
+
+**Critical PDF-MD limitation:** For math-heavy papers, PDF text extraction renders all equations as `<!-- formula-not-decoded -->` markers. For a theoretical physics paper in the benchmark, every quantitative relationship in the paper became opaque — a fundamental loss that pipeline improvements cannot fully recover without pix2tex.
+
+*Full benchmark: [`docs/AG-ClSo4.5-format benchmark.md`](docs/AG-ClSo4.5-format%20benchmark.md)*
+
+---
 
 ## Key Principles
 
@@ -103,18 +146,16 @@ a change in the rate-limiting step.
 
 ```
 scimd/
-├── spec/
-│   └── SPECIFICATION.md    # Full format specification (v0.1.0)
-├── examples/
-│   ├── basic.smd           # Simple example document
-│   └── full-paper.smd      # Complete scientific paper
-├── parser/
-│   ├── scimd_parser.py     # Reference parser in Python
-│   ├── scimd_validator.py  # Validation tool
-│   └── requirements.txt    # Python dependencies
-├── docs/
-│   ├── AUTHORING_GUIDE.md  # How to write SciMD documents
-│   └── RAG_GUIDE.md        # How to use SciMD for RAG pipelines
+├── scimd_parser.py          # Reference parser in Python
+├── scimd_validator.py       # Validation tool
+├── SPECIFICATION.md         # Full format specification (v0.1.0)
+├── AUTHORING_GUIDE.md       # How to write SciMD documents
+├── RAG_GUIDE.md             # How to use SciMD for RAG pipelines
+├── full-paper.smd           # Complete scientific paper example
+├── requirements.txt         # Python dependencies
+├── pyproject.toml           # Python packaging (pip install pyscimd)
+├── documentation/           # Supplementary docs (format, parser, validator)
+├── tests/                   # Test suite
 ├── LICENSE
 ├── CONTRIBUTING.md
 └── README.md
@@ -124,19 +165,19 @@ scimd/
 
 ### Writing a Document
 
-Any text editor works. Save your file with the `.smd` extension and follow the [Authoring Guide](docs/AUTHORING_GUIDE.md).
+Any text editor works. Save your file with the `.smd` extension and follow the [Authoring Guide](AUTHORING_GUIDE.md).
 
 ### Validating a Document
 
 ```bash
-pip install scimd
-scimd validate my-paper.smd
+pip install pyscimd
+scimd-validate my-paper.smd
 ```
 
 ### Parsing for RAG
 
 ```python
-from scimd import SciMDParser
+from scimd_parser import SciMDParser
 
 doc = SciMDParser.parse("my-paper.smd")
 
@@ -145,10 +186,10 @@ for section in doc.sections:
     print(section.id, section.summary)
     print(section.content)
 
-# Extract all chart data as DataFrames
+# Extract all chart data as structured records
 for chart in doc.charts:
     print(chart.interpretation)
-    print(chart.dataframe)
+    print(chart.as_dict_list)   # list of dicts, one per row
 ```
 
 ## For the Scientific Community
@@ -164,7 +205,7 @@ SciMD is built to serve researchers, not platforms:
 ## Roadmap
 
 - [x] v0.1.0 — Core specification
-- [ ] v0.2.0 — Reference parser + validator (Python)
+- [x] v0.2.0 — Reference parser + validator (Python, available as `pyscimd` on PyPI)
 - [ ] v0.3.0 — VS Code extension with live preview
 - [ ] v0.4.0 — Pandoc filter for PDF/HTML/DOCX export
 - [ ] v0.5.0 — LLM training pipeline toolkit

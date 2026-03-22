@@ -1,0 +1,128 @@
+---smd
+title: "Impact of urban heat islands on local precipitation patterns in coastal cities"
+authors:
+  - name: "Dr. Alice Thompson"
+    affiliation: "Department of Atmospheric Sciences, University of Miami"
+    email: "athompson@miami.edu"
+    corresponding: true
+  - name: "Robert Miller"
+    affiliation: "National Weather Service"
+version: "0.1.0"
+lang: "en"
+date: "2026-03-20"
+license: "CC-BY-4.0"
+keywords: ["Urban Heat Island", "Precipitation", "Coastal Cities", "Climate Change", "Meteorology"]
+abstract: |
+  Urban Heat Islands (UHI) are known to modify local microclimates. This study 
+  investigates the relationship between UHI intensity and convective 
+  precipitation patterns in three major coastal cities: Miami, Houston, and 
+  New Orleans. Our results indicate a significant increase in late-afternoon 
+  rainfall frequency and intensity downwind of urban centers, particularly 
+  during the summer months.
+references:
+  - id: "oke1982"
+    type: "article"
+    authors: ["Oke, T. R."]
+    title: "The Energetic Basis of the Urban Heat Island"
+    journal: "Quarterly Journal of the Royal Meteorological Society"
+    year: 1982
+  - id: "shepherd2005"
+    type: "article"
+    authors: ["Shepherd, J. M."]
+    title: "A Review of Anthropogenic Aerosol-Precipitation Relationships"
+    journal: "Geography Compass"
+    year: 2005
+---
+
+::section{#introduction}
+::meta
+type: introduction
+summary: "Introduction to Urban Heat Islands and their historical link to altered precipitation patterns."
+::
+
+# Introduction
+
+The Urban Heat Island (UHI) effect refers to the phenomenon where urban 
+areas experience significantly higher temperatures than their rural 
+surroundings @cite{oke1982}. Recent studies indicate that this thermal 
+anomaly can disrupt local wind patterns and enhance convective 
+precipitation @cite{shepherd2005}.
+
+::endsection
+
+
+::section{#methods}
+::meta
+type: methods
+summary: "Data sources from NEXRAD radar and urban temperature sensors."
+::
+
+# Methodology
+
+We utilized 10 years of NEXRAD Level II radar data to track precipitation 
+events. Temperature data were obtained from high-density urban sensor 
+networks and satellite-derived land surface temperature (LST) maps.
+
+::endsection
+
+
+::section{#results}
+::meta
+type: results
+summary: "Analysis of precipitation intensity and frequency downwind of urban areas."
+depends_on: ["#methods"]
+::
+
+# Results
+
+Our analysis focused on the "urban-induced rainfall" (UIR) occurring within 
+50 km of the city center.
+
+::chart{#tbl-rainfall-comparison}
+::title Summer precipitation intensity: Urban vs. Rural
+::interpretation
+The data shows a clear increase in both mean and peak precipitation 
+intensity in urban areas compared to rural control sites. Miami exhibits 
+the strongest UHI-precipitation coupling, with a 25% increase in 
+late-afternoon rain volume.
+::
+| City | Urban Avg Rain (mm/h) | Rural Avg Rain (mm/h) | Variance (%) |
+|------|-----------------------|-----------------------|--------------|
+| Miami | 12.4 | 9.8 | +26.5 |
+| Houston | 10.5 | 8.9 | +18.0 |
+| New Orleans | 11.2 | 10.1 | +10.9 |
+::endchart
+
+::diagram{#fig-uhi-mechanism}
+::type flowchart
+::description
+This diagram illustrates the thermodynamic mechanism by which urban heat 
+leads to increased rainfall: Surface heating -> Convective updraft -> 
+Moisture convergence -> Precipitation.
+::
+```mermaid
+graph TD
+    A[Urban Surface Heating] --> B[Convective Updraft]
+    B --> C[Moisture Convergence]
+    C --> D[Precipitation]
+```
+::enddiagram
+
+::endsection
+
+
+::section{#conclusion}
+::meta
+type: conclusion
+summary: "Conclusions on urban planning and climate adaptation."
+depends_on: ["#results"]
+::
+
+# Conclusion
+
+Urban centers act as significant drivers of local weather modification. 
+Integrating "cool city" strategies (e.g., green roofs, reflective pavements) 
+may help mitigate not only temperatures but also the risk of 
+urban flash flooding induced by UHI.
+
+::endsection

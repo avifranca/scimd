@@ -1,0 +1,123 @@
+---smd
+title: "Optimization of Transformer Attention via Sparse Kernels"
+authors:
+  - name: "Dr. Elena Rossi"
+    affiliation: "Neural Computing Lab, ETH Zurich"
+    email: "erossi@ethz.ch"
+    corresponding: true
+  - name: "Aiden Chen"
+    affiliation: "Neural Computing Lab, ETH Zurich"
+version: "0.1.0"
+lang: "en"
+date: "2026-03-20"
+license: "MIT"
+keywords: ["Transformers", "Attention Mechanism", "Sparsity", "LLM Optimization", "CUDA Kernels"]
+abstract: |
+  The quadratic complexity of the standard self-attention mechanism remains a 
+  significant bottleneck for processing long sequences in Large Language Models (LLMs). 
+  This paper proposes a novel sparse attention kernel that leverages block-level 
+  sparsity to reduce memory overhead and latency. Our approach achieves a 40% 
+  speedup on sequences of 32k tokens while maintaining 98% of the model's 
+  perplexity on standard benchmarks.
+references:
+  - id: "vaswani2017"
+    type: "article"
+    authors: ["Vaswani, A.", "Shazeer, N.", "Parmar, N."]
+    title: "Attention is All You Need"
+    journal: "Advances in Neural Information Processing Systems"
+    year: 2017
+  - id: "child2019"
+    type: "article"
+    authors: ["Child, R.", "Gray, S.", "Radford, A."]
+    title: "Generating Long Sequences with Sparse Transformers"
+    year: 2019
+---
+
+::section{#introduction}
+::meta
+type: introduction
+summary: "Motivation for sparse attention in long-context LLMs and limitations of existing dense mechanisms."
+::
+
+# Introduction
+
+Since the introduction of the Transformer architecture @cite{vaswani2017}, 
+self-attention has become the de facto standard for sequence modeling. 
+However, the $O(n^2)$ complexity of the attention matrix calculation makes 
+it prohibitively expensive for contexts exceeding 8k tokens. 
+
+Sparse attention @cite{child2019} offers a potential solution by only 
+computing a subset of the attention scores. We introduce a tiled sparse kernel 
+that optimizes memory layout for modern GPU architectures.
+
+::endsection
+
+
+::section{#methods}
+::meta
+type: methods
+summary: "Description of the tiled sparse attention kernel and the block-level sparsity pattern."
+::
+
+# Methodology
+
+Our approach relies on a block-sparse pattern where the attention matrix 
+is divided into $64 \times 64$ blocks. Only blocks within a specific 
+Hamming distance of the diagonal are computed.
+
+::equation{#eq-attention}
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T \odot M}{\sqrt{d_k}}\right) V
+$$
+::label Sparse Attention masked according to the block matrix M
+::endequation
+
+The mask matrix $M$ is defined at the block level, allowing for coalesced memory access.
+
+::endsection
+
+
+::section{#results}
+::meta
+type: results
+summary: "Comparative performance metrics between dense and sparse attention kernels."
+depends_on: ["#methods"]
+::
+
+# Results
+
+Testing was conducted on NVIDIA H100 GPUs using context lengths ranging from 4k to 64k.
+
+::chart{#tbl-performance}
+::title Latency (ms) comparison across sequence lengths
+::interpretation
+As shown in the table, our sparse kernel begins to outperform the standard 
+FlashAttention-2 implementation at sequence lengths $\geq 16k$. At $64k$, the 
+latency is reduced by over $2.5\times$ compared to the dense baseline.
+::
+| Sequence Length | Dense Latency (ms) | Sparse Latency (ms) | Speedup |
+|-----------------|--------------------|---------------------|---------|
+| 4,096           | 12.4               | 14.1                | 0.88x   |
+| 8,192           | 45.2               | 42.1                | 1.07x   |
+| 16,384          | 192.5              | 115.3               | 1.67x   |
+| 32,768          | 840.4              | 410.2               | 2.05x   |
+| 65,536          | 3520.1             | 1380.5              | 2.55x   |
+::endchart
+
+::endsection
+
+
+::section{#conclusion}
+::meta
+type: conclusion
+summary: "Final summary of the sparse kernel's impact on long-context processing."
+depends_on: ["#results"]
+::
+
+# Conclusion
+
+We have demonstrated that block-level sparsity combined with custom tiled 
+kernels can significantly alleviate the attention bottleneck. Future work 
+will explore dynamic sparsity patterns that adapt to input content.
+
+::endsection

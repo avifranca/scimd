@@ -1,0 +1,1021 @@
+---smd
+title: "Whistle characterization of long-beaked common dolphin (Delphinus delphis bairdii) in La Paz Bay, Gulf of California"
+authors:
+  - name: "Óscar Carlón-Beltrán"
+    affiliation: "Department of Marine and Coastal Sciences, Autonomous University of Baja California Sur, La Paz, Baja California Sur, Mexico"
+  - name: "Lorena Viloria-Gómora"
+    affiliation: "Department of Marine and Coastal Sciences, Autonomous University of Baja California Sur, La Paz, Baja California Sur, Mexico"
+    email: "lviloria@uabcs.mx"
+    corresponding: true
+  - name: "Jorge Urbán R."
+    affiliation: "Department of Marine and Coastal Sciences, Autonomous University of Baja California Sur, La Paz, Baja California Sur, Mexico"
+  - name: "Sergio Martínez-Aguilar"
+    affiliation: "Department of Marine and Coastal Sciences, Autonomous University of Baja California Sur, La Paz, Baja California Sur, Mexico"
+  - name: "Simone Antichi"
+    affiliation: "Department of Marine and Coastal Sciences, Autonomous University of Baja California Sur, La Paz, Baja California Sur, Mexico"
+version: "0.1.0"
+lang: "es"
+date: "2023-07-19"
+license: "CC-BY-4.0"
+keywords: ["Bioacoustics", "Dolphins", "Mexico", "Gulf of California", "Vocal repertoire", "Delphinus delphis bairdii", "Passive acoustic monitoring"]
+abstract: |
+  Long-beaked common dolphin (Delphinus delphis bairdii) distribution is limited to
+  the Eastern North Pacific Ocean. Its whistle repertoire is poorly investigated,
+  with no studies in the Gulf of California. The aim of the present study is to
+  characterize the whistles of this species and compare their parameters with
+  different populations. Acoustic monitoring was conducted in La Paz Bay, Gulf of
+  California. Recordings were inspected in spectrogram view in Raven Pro, selecting
+  good quality whistles (n = 270). In the software Luscinia, contours were manually
+  traced to obtain whistle frequencies and duration. Number of steps, inflection
+  points and contour type were visually determined. We calculated the descriptive
+  statistics of the selected whistle parameters and we compared the results with a
+  dolphins population from the Eastern Pacific Ocean. Permutational multivariate
+  analysis of variance (PERMANOVA) was performed to test the intraspecific variation
+  of the whistle parameters among groups. In the present study the mean values (±SD)
+  of the whistle parameters were: maximum frequency = 14.13 ± 3.71 kHz, minimum
+  frequency = 8.44 ± 2.58 kHz and duration = 0.44 ± 0.31 s. Whistles with the
+  upsweep contour were the most common ones (34.44%). The coefficient of variation
+  (CV) values for modulation parameters were high (>100%), in accordance with other
+  studies on dolphins. Whistle parameters showed significant differences among groups.
+  Finally, ending and maximum frequencies, duration and inflection points of the
+  whistles recorded in the present study were lower compared with the parameters of
+  the long-beaked common dolphins from the Eastern Pacific Ocean. This study provides
+  the first whistle characterization of long-beaked common dolphin from the Gulf of
+  California and it will help future passive acoustic monitoring applications in the
+  study area.
+citation:
+  doi: "10.7717/peerj.15687"
+  bibtex: |
+    @article{CarlenBeltran2023,
+      author  = {Carlón-Beltrán, Óscar and Viloria-Gómora, Lorena and Urbán R., Jorge
+                 and Martínez-Aguilar, Sergio and Antichi, Simone},
+      title   = {Whistle characterization of long-beaked common dolphin
+                 (\textit{Delphinus delphis bairdii}) in La Paz Bay, Gulf of California},
+      journal = {PeerJ},
+      year    = {2023},
+      volume  = {11},
+      pages   = {e15687},
+      doi     = {10.7717/peerj.15687}
+    }
+references:
+  - id: "ansmann2007"
+    type: "article"
+    authors: ["Ansmann IC", "Goold JC", "Evans PG", "Simmonds M", "Keith SG"]
+    title: "Variation in the whistle characteristics of short-beaked common dolphins, Delphinus delphis, at two locations around the British Isles"
+    journal: "Journal of the Marine Biological Association of the United Kingdom"
+    year: 2007
+    volume: 87
+    pages: "19–26"
+    doi: "10.1017/S0025315407054963"
+  - id: "antichi2023"
+    type: "article"
+    authors: ["Antichi S", "Austin M", "May-Collado LJ", "Urbán RJ", "Martínez-Aguilar S", "Viloria-Gómora L"]
+    title: "Differences in the whistles of two ecotypes of bottlenose dolphins from the Gulf of California"
+    journal: "JASA Express Letters"
+    year: 2023
+    volume: 3
+    pages: "051201"
+    doi: "10.1121/10.0019502"
+  - id: "antichi2022b"
+    type: "article"
+    authors: ["Antichi S", "Urbán J", "Martínez-Aguilar S", "Viloria-Gómora L"]
+    title: "Changes in whistle parameters of two common bottlenose dolphin ecotypes as a result of the physical presence of the research vessel"
+    journal: "PeerJ"
+    year: 2022
+    volume: 10
+    pages: "e14074"
+    doi: "10.7717/peerj.14074"
+  - id: "azevedo2005"
+    type: "article"
+    authors: ["Azevedo AF", "Van Sluys M"]
+    title: "Whistles of tucuxi dolphins (Sotalia fluviatilis) in Brazil: comparisons among populations"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2005
+    volume: 117
+    pages: "1456–1464"
+    doi: "10.1121/1.1859232"
+  - id: "braulik2021"
+    type: "report"
+    authors: ["Braulik G", "Jefferson T", "Bearzi G"]
+    title: "Delphinus delphis. The IUCN Red List of Threatened Species 2021: e.T134817215A50352620"
+    year: 2021
+  - id: "lachlan2007"
+    type: "software"
+    authors: ["Lachlan R"]
+    title: "Luscinia: a bioacoustics analysis computer program"
+    year: 2007
+    url: "https://luscinia.sourceforge.net/"
+  - id: "oswald2007"
+    type: "article"
+    authors: ["Oswald JN", "Rankin S", "Barlow J", "Lammers MO"]
+    title: "A tool for real-time acoustic species identification of delphinid whistles"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2007
+    volume: 122
+    pages: "587–595"
+    doi: "10.1121/1.2743157"
+  - id: "oswald2021b"
+    type: "article"
+    authors: ["Oswald JN", "Walmsley SF", "Casey C", "Fregosi S", "Southall B", "Janik VM"]
+    title: "Species information in whistle frequency modulation patterns of common dolphins"
+    journal: "Philosophical Transactions of the Royal Society B: Biological Sciences"
+    year: 2021
+    volume: 376
+    pages: "20210046"
+    doi: "10.1098/rstb.2021.0046"
+  - id: "petrella2012"
+    type: "article"
+    authors: ["Petrella V", "Martinez E", "Anderson MG", "Stockin KA"]
+    title: "Whistle characteristics of common dolphins (Delphinus sp.) in the Hauraki Gulf, New Zealand"
+    journal: "Marine Mammal Science"
+    year: 2012
+    volume: 28
+    pages: "479–496"
+    doi: "10.1111/j.1748-7692.2011.00499.x"
+  - id: "tyack1986"
+    type: "article"
+    authors: ["Tyack P"]
+    title: "Population biology, social behavior and communication in whales and dolphins"
+    journal: "Trends in Ecology & Evolution"
+    year: 1986
+    volume: 1
+    pages: "144–150"
+    doi: "10.1016/0169-5347(86)90042-X"
+  - id: "urban2005"
+    type: "chapter"
+    authors: ["Urbán R", "Rojas-Bracho L", "Guerrero-Ruiz M", "Jaramillo-Legorreta A", "Findley LT"]
+    title: "Cetacean diversity and conservation in the Gulf of California"
+    booktitle: "Biodiversity, ecosystems, and conservation in Northern Mexico"
+    publisher: "Oxford University Press"
+    year: 2005
+    pages: "276–297"
+  - id: "maycollado2008"
+    type: "article"
+    authors: ["May-Collado LJ", "Wartzok D"]
+    title: "A comparison of bottlenose dolphin whistles in the Atlantic Ocean: factors promoting whistle variation"
+    journal: "Journal of Mammalogy"
+    year: 2008
+    volume: 89
+    pages: "1229–1240"
+    doi: "10.1644/07-MAMM-A-310.1"
+  - id: "pagliani2022"
+    type: "article"
+    authors: ["Pagliani B", "Amorim TO", "De Castro FR", "Andriolo A"]
+    title: "Intraspecific variation in short-beaked common dolphin's whistle repertoire"
+    journal: "Bioacoustics"
+    year: 2022
+    volume: 31
+    pages: "1–16"
+    doi: "10.1080/09524622.2020.1858449"
+  - id: "altmann1974"
+    type: "article"
+    authors: ["Altmann J"]
+    title: "Observational study of behavior: sampling methods"
+    journal: "Behaviour"
+    year: 1974
+    volume: 49
+    pages: "227–266"
+    doi: "10.1163/156853974X00534"
+  - id: "akkaya2023"
+    type: "article"
+    authors: ["Akkaya A", "Awbery T", "Medcalf K", "Lyne P", "Cipriano G", "Alvarenga M", "Israpilova L", "Atalan Y", "Eikelenboom O", "Ricci P", "Crugliano R", "Papale E", "Fanizza C", "Carlucci R"]
+    title: "Initial results on the variation of whistle characteristics of bottlenose dolphins from two neighbouring regions of the Mediterranean Sea: Northern Ionian and Southern Adriatic Sea"
+    journal: "Frontiers in Marine Science"
+    year: 2023
+    volume: 10
+    pages: "1–15"
+    doi: "10.3389/fmars.2023.1099576"
+  - id: "antichi2022a"
+    type: "article"
+    authors: ["Antichi S", "Jaramillo-Legorreta AM", "Urbán RJ", "Martínez-Aguilar S", "Viloria-Gómora L"]
+    title: "Small vessel impact on the whistle parameters of two ecotypes of common bottlenose dolphin (Tursiops truncatus) in La Paz Bay, Mexico"
+    journal: "Diversity"
+    year: 2022
+    volume: 14
+    pages: "712–724"
+    doi: "10.3390/d14090712"
+  - id: "au2008"
+    type: "book"
+    authors: ["Au WW", "Hastings MC"]
+    title: "Principles of marine bioacoustics"
+    year: 2008
+  - id: "auriolesgamboa2013"
+    type: "article"
+    authors: ["Aurioles-Gamboa D", "Rodríguez-Pérez MY", "Sánchez-Velasco L", "Lavín MF"]
+    title: "Habitat, trophic level, and residence of marine mammals in the Gulf of California assessed by stable isotope analysis"
+    journal: "Marine Ecology Progress Series"
+    year: 2013
+    volume: 488
+    pages: "275–290"
+    doi: "10.3354/meps10369"
+  - id: "azzolin2021"
+    type: "article"
+    authors: ["Azzolin M", "Gannier A", "Papale E", "Buscaino G", "Mussi B", "Ardizzone G", "Giacoma C", "Pace DS"]
+    title: "Whistle variability of the Mediterranean short beak common dolphin"
+    journal: "Aquatic Conservation: Marine and Freshwater Ecosystems"
+    year: 2021
+    volume: 31
+    pages: "36–50"
+    doi: "10.1002/aqc.3168"
+  - id: "azzolin2013"
+    type: "article"
+    authors: ["Azzolin M", "Papale E", "Lammers MO", "Gannier A", "Giacoma C"]
+    title: "Geographic variation of whistles of the striped dolphin (Stenella coeruleoalba) within the Mediterranean Sea"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2013
+    volume: 134
+    pages: "694–705"
+    doi: "10.1121/1.4808329"
+  - id: "baker2017"
+    type: "article"
+    authors: ["Baker I", "O’Brien J", "McHugh K", "Berrow S"]
+    title: "An ethogram for bottlenose dolphins (Tursiops truncatus) in the Shannon Estuary, Ireland"
+    journal: "Aquatic Mammals"
+    year: 2017
+    volume: 43
+    pages: "594–613"
+    doi: "10.1578/AM.43.6.2017.594"
+  - id: "bazúadurán2002"
+    type: "article"
+    authors: ["Bazúa-Durán C", "Au WW"]
+    title: "The whistles of Hawaiian spinner dolphins"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2002
+    volume: 112
+    pages: "3064–3072"
+    doi: "10.1121/1.1508785"
+  - id: "bazúadurán2004"
+    type: "article"
+    authors: ["Bazúa-Durán C", "Au WW"]
+    title: "Geographic variations in the whistles of spinner dolphins (Stenella longirostris) of the Main Hawaiıan Islands"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2004
+    volume: 116
+    pages: "3757–3769"
+    doi: "10.1121/1.1785672"
+  - id: "bearzi1994"
+    type: "book"
+    authors: ["Bearzi G"]
+    title: "Behavioural states: terminology and definitions"
+    year: 1994
+    volume: 23
+    pages: "9–12"
+  - id: "caldwell1968"
+    type: "article"
+    authors: ["Caldwell MC", "Caldwell DK"]
+    title: "Vocalization of naive captive dolphins in small groups"
+    journal: "Science"
+    year: 1968
+    volume: 159
+    pages: "1121–1123"
+    doi: "10.1126/science.159.3819.1121"
+  - id: "camargo2006"
+    type: "article"
+    authors: ["Camargo Jr FS", "Rollo MM", "Giampaoli V", "Bellini C"]
+    title: "Whistle variability in South Atlantic spinner dolphins from the Fernando de Noronha Archipelago off Brazil"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2006
+    volume: 120
+    pages: "4071–4079"
+    doi: "10.1121/1.2359704"
+  - id: "carretta2011"
+    type: "article"
+    authors: ["Carretta JV", "Chivers SJ", "Perryman WL"]
+    title: "Abundance of the long-beaked common dolphin (Delphinus capensis) in California and western Baja California waters estimated from a 2009 ship-based line-transect survey"
+    journal: "Bulletin, Southern California Academy of Sciences"
+    year: 2011
+    volume: 110
+    pages: "152–165"
+    doi: "10.3160/0038-3872-110.3.152"
+  - id: "ctsmm2023"
+    type: "book"
+    authors: ["CTSMM"]
+    title: "List of marine mammal species and subspecies"
+    year: 2023
+  - id: "cunha2015"
+    type: "article"
+    authors: ["Cunha HA", "de Castro RL", "Secchi ER", "Crespo EA", "Lailson-Brito J", "Azevedo AF", "Lazoski C", "Solé-Cava AM"]
+    title: "Molecular and morphological differentiation of common dolphins (Delphinus sp.) in the Southwestern Atlantic: testing the two species hypothesis in sympatry"
+    journal: "PLOS ONE"
+    year: 2015
+    volume: 10
+    pages: "e0140251"
+    doi: "10.1371/journal.pone.0140251"
+  - id: "díaz2011"
+    type: "article"
+    authors: ["Díaz López B"]
+    title: "Whistle characteristics in free-ranging bottlenose dolphins (Tursiops truncatus) in the Mediterranean Sea: Influence of behaviour"
+    journal: "Mammalian Biology"
+    year: 2011
+    volume: 76
+    pages: "180–189"
+    doi: "10.1016/j.mambio.2010.06.006"
+  - id: "fearey2019"
+    type: "article"
+    authors: ["Fearey J", "Elwen SH", "James B", "Gridley T"]
+    title: "Identification of potential signature whistles from free-ranging common dolphins (Delphinus delphis) in South Africa"
+    journal: "Animal cognition"
+    year: 2019
+    volume: 22
+    pages: "777–789"
+    doi: "10.1007/s10071-019-01274-1"
+  - id: "gales2009"
+    type: "article"
+    authors: ["Gales N", "Bowen W", "Johnston D", "Kovacs K", "Littnan C", "Perrin W", "Reynolds III J", "Thompson P"]
+    title: "Guidelines for the treatment of marine mammals in field research"
+    journal: "Marine Mammal Science"
+    year: 2009
+    volume: 25
+    pages: "725–736"
+    doi: "10.1111/j.1748-7692.2008.00279.x"
+  - id: "gannier2020"
+    type: "article"
+    authors: ["Gannier A", "Fuchs S", "Gannier A", "Fernandez M", "Azevedo JM"]
+    title: "Dolphin whistle repertoires around São Miguel (Azores): are you common or spotted?"
+    journal: "Applied Acoustics"
+    year: 2020
+    volume: 161
+    pages: "107169"
+    doi: "10.1016/j.apacoust.2019.107169"
+  - id: "gannier2010"
+    type: "article"
+    authors: ["Gannier A", "Fuchs S", "Quèbre P", "Oswald JN"]
+    title: "Performance of a contour-based classification method for whistles of Mediterranean delphinids"
+    journal: "Applied Acoustics"
+    year: 2010
+    volume: 71
+    pages: "1063–1069"
+    doi: "10.1016/j.apacoust.2010.05.019"
+  - id: "gauger2021"
+    type: "article"
+    authors: ["Gauger MF", "Caraveo-Patiño J", "Romero-Vivas E"]
+    title: "Passive acoustic monitoring of the bottlenose dolphin Tursiops truncatus to determine continuous presence in Ensenada de La Paz, Mexico"
+    journal: "Revista de Biología Marina y Oceanografía"
+    year: 2021
+    volume: 55
+    pages: "238–249"
+    doi: "10.22370/rbmo.2020.55.3.2588"
+  - id: "gauger2022"
+    type: "article"
+    authors: ["Gauger MF", "Romero-Vivas E", "Peck MA", "Balart EF", "Caraveo-Patiño J"]
+    title: "Seasonal and diel influences on bottlenose dolphin acoustic detection determined by whistles in a coastal lagoon in the southwestern Gulf of California"
+    journal: "PeerJ"
+    year: 2022
+    volume: 10
+    pages: "e13246"
+    doi: "10.7717/peerj.13246"
+  - id: "hawkins2009"
+    type: "article"
+    authors: ["Hawkins ER", "Gartside DF"]
+    title: "Patterns of whistles emitted by wild indo-pacific bottlenose dolphins (Tursiops aduncus) during a provisioning program"
+    journal: "Aquatic Mammals"
+    year: 2009
+    volume: 35
+    pages: "171–186"
+  - id: "hawkins2010"
+    type: "article"
+    authors: ["Hawkins ER", "Gartside DF"]
+    title: "Whistle emissions of Indo-Pacific bottlenose dolphins (Tursiops aduncus) differ with group composition and surface behaviors"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2010
+    volume: 127
+    pages: "2652–2663"
+    doi: "10.1121/1.3308465"
+  - id: "heiler2016"
+    type: "article"
+    authors: ["Heiler J", "Elwen SH", "Kriesell H", "Gridley T"]
+    title: "Changes in bottlenose dolphin whistle parameters related to vessel presence, surface behaviour and group composition"
+    journal: "Animal Behaviour"
+    year: 2016
+    volume: 117
+    pages: "167–177"
+    doi: "10.1016/j.anbehav.2016.04.014"
+  - id: "hershkovitz1966"
+    type: "article"
+    authors: ["Hershkovitz P"]
+    title: "Catalog of living whales"
+    journal: "Bulletin of the United States National Museum"
+    year: 1966
+    volume: 246
+    pages: "1–259"
+  - id: "kuczaj2015"
+    type: "article"
+    authors: ["Kuczaj SA", "Frick EE", "Jones BL", "Lea JS", "Beecham D", "Schnöller F"]
+    title: "Underwater observations of dolphin reactions to a distressed conspecific"
+    journal: "Learning & Behavior"
+    year: 2015
+    volume: 43
+    pages: "289–300"
+    doi: "10.3758/s13420-015-0179-9"
+  - id: "la2020"
+    type: "article"
+    authors: ["La Manna G", "Rako-Gospić N", "Sarà G", "Gatti F", "Bonizzoni S", "Ceccherelli G"]
+    title: "Whistle variation in Mediterranean common bottlenose dolphin: the role of geographical, anthropogenic, social, and behavioral factors"
+    journal: "Ecology and Evolution"
+    year: 2020
+    volume: 10
+    pages: "1971–1987"
+    doi: "10.1002/ece3.6029"
+  - id: "luís2021"
+    type: "article"
+    authors: ["Luís A", "May-Collado L", "Rako-Gospić N", "Gridley T", "Papale E", "Azevedo A", "Silva M", "Buscaino G", "Herzing D", "Dos Santos M"]
+    title: "Vocal universals and geographic variations in the acoustic repertoire of the common bottlenose dolphin"
+    journal: "Scientific Reports"
+    year: 2021
+    volume: 11
+    pages: "1–9"
+    doi: "10.1038/s41598-021-90710-9"
+  - id: "madsen2012"
+    type: "article"
+    authors: ["Madsen PT", "Jensen FH", "Carder D", "Ridgway S"]
+    title: "Dolphin whistles: a functional misnomer revealed by heliox breathing"
+    journal: "Biology Letters"
+    year: 2012
+    volume: 8
+    pages: "211–213"
+    doi: "10.1098/rsbl.2011.0701"
+  - id: "mann1999"
+    type: "article"
+    authors: ["Mann J"]
+    title: "Behavioral sampling methods for cetaceans: a review and critique"
+    journal: "Marine Mammal Science"
+    year: 1999
+    volume: 15
+    pages: "102–122"
+    doi: "10.1111/j.1748-7692.1999.tb00784.x"
+  - id: "martinez2020"
+    type: "dataset"
+    authors: ["Martinez Arbizu P"]
+    title: "pairwiseAdonis: pairwise multilevel comparison using adonis"
+    year: 2020
+    url: "https://rdrr.io/github/gauravsk/ranacapa/"
+  - id: "maycollado2010"
+    type: "article"
+    authors: ["May-Collado LJ"]
+    title: "Changes in whistle structure of two dolphin species during interspecific associations"
+    journal: "Ethology"
+    year: 2010
+    volume: 116
+    pages: "1065–1074"
+    doi: "10.1111/j.1439-0310.2010.01828.x"
+  - id: "morisaka2005"
+    type: "article"
+    authors: ["Morisaka T", "Shinohara M", "Nakahara F", "Akamatsu T"]
+    title: "Geographic variations in the whistles among three Indo-Pacific bottlenose dolphin Tursiops aduncus populations in Japan"
+    journal: "Fisheries Science"
+    year: 2005
+    volume: 71
+    pages: "568–576"
+    doi: "10.1111/j.1444-2906.2005.01001.x"
+  - id: "niño2006"
+    type: "article"
+    authors: ["Niño Torres CA", "Gallo-Reynoso JP", "Galván-Magaña F", "Escobar-Briones E", "Macko SA"]
+    title: "Isotopic analysis of δ13C, δ15N, and δ34S a feeding tale in teeth of the longbeaked common dolphin, Delphinus capensis"
+    journal: "Marine Mammal Science"
+    year: 2006
+    volume: 22
+    pages: "831–846"
+    doi: "10.1111/j.1748-7692.2006.00065.x"
+  - id: "oswald2003"
+    type: "article"
+    authors: ["Oswald JN", "Barlow J", "Norris TF"]
+    title: "Acoustic identification of nine delphinid species in the eastern tropical Pacific Ocean"
+    journal: "Marine Mammal Science"
+    year: 2003
+    volume: 19
+    pages: "20–037"
+    doi: "10.1111/j.1748-7692.2003.tb01090.x"
+  - id: "oswald2021a"
+    type: "article"
+    authors: ["Oswald JN", "Walmsley SF", "Casey C", "Fregosi S", "Southall B", "Janik VM"]
+    title: "Oscillatory whistles—the ups and downs of identifying species in passive acoustic recordings"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2021a
+    volume: 149
+    pages: "A40–A40"
+  - id: "panova2021"
+    type: "article"
+    authors: ["Panova E", "Agafonov A", "Logominova I"]
+    title: "First description of whistles of Black Sea short-beaked common dolphins, Delphinus delphis ponticus"
+    journal: "Bioacoustics"
+    year: 2021
+    volume: 30
+    pages: "662–679"
+    doi: "10.1080/09524622.2020.1842245"
+  - id: "papale2014"
+    type: "article"
+    authors: ["Papale E", "Azzolin M", "Cascão I", "Gannier A", "Lammers M", "Martin V", "Oswald J", "Perez-Gil M", "Prieto R", "Silva M"]
+    title: "Macro-and micro-geographic variation of short-beaked common dolphin’s whistles in the Mediterranean Sea and Atlantic Ocean"
+    journal: "Ethology Ecology & Evolution"
+    year: 2014
+    volume: 26
+    pages: "392–404"
+    doi: "10.1080/03949370.2013.851122"
+  - id: "papale2021"
+    type: "article"
+    authors: ["Papale EB", "Azzolin MA", "Cascão I", "Gannier A", "Lammers MO", "Martin VM", "Oswald JN", "Perez-Gil M", "Prieto R", "Silva MA"]
+    title: "Dolphin whistles can be useful tools in identifying units of conservation"
+    journal: "BMC Zoology"
+    year: 2021
+    volume: 6
+    pages: "1–13"
+    doi: "10.1186/s40850-021-00065-x"
+  - id: "pires2021"
+    type: "article"
+    authors: ["Pires CR", "Rossi-Santos MR", "Paro AD", "Wedekin LL"]
+    title: "Whistles of the pantropical spotted dolphin (Stenella attenuata) in Santos Basin, western South Atlantic Ocean"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2021
+    volume: 149
+    pages: "3241–3249"
+    doi: "10.1121/10.0004950"
+  - id: "r2022"
+    type: "software"
+    authors: ["R Core Team"]
+    title: "R: A language and environment for statistical computing"
+    year: 2022
+    url: "https://www.r-project.org"
+  - id: "rendell1999"
+    type: "article"
+    authors: ["Rendell L", "Matthews J", "Gill A", "Gordon J", "Macdonald D"]
+    title: "Quantitative analysis of tonal calls from five odontocete species, examining interspecific and intraspecific variation"
+    journal: "Journal of Zoology"
+    year: 1999
+    volume: 249
+    pages: "403–410"
+    doi: "10.1111/j.1469-7998.1999.tb01209.x"
+  - id: "richardson2013"
+    type: "book"
+    authors: ["Richardson WJ", "Greene Jr CR", "Malme CI", "Thomson DH"]
+    title: "Marine mammals and noise"
+    year: 2013
+  - id: "rosel1994"
+    type: "article"
+    authors: ["Rosel P", "Dizon A", "Heyning J"]
+    title: "Genetic analysis of sympatric morphotypes of common dolphins (genus Delphinus)"
+    journal: "Marine Biology"
+    year: 1994
+    volume: 119
+    pages: "159–167"
+    doi: "10.1007/BF00349552"
+  - id: "rstudio2022"
+    type: "software"
+    authors: ["RStudio Team"]
+    title: "RStudio: integrated development for R"
+    year: 2022
+    url: "http://www.rstudio.com/"
+  - id: "steiner1981"
+    type: "article"
+    authors: ["Steiner WW"]
+    title: "Species-specific differences in pure tonal whistle vocalizations of five western North Atlantic dolphin species"
+    journal: "Behavioral Ecology and Sociobiology"
+    year: 1981
+    volume: 9
+    pages: "241–246"
+    doi: "10.1007/BF00299878"
+  - id: "tyack2000"
+    type: "book"
+    authors: ["Tyack PL"]
+    title: "Functional aspects of cetacean communication"
+    year: 2000
+    pages: "270–307"
+  - id: "vidal2012"
+    type: "article"
+    authors: ["Vidal O", "Gallo-Reynoso JP"]
+    title: "Composition by sex and size of long-beaked common dolphin (Delphinus capensis) from a die-off in the Gulf of California, México"
+    journal: "Marine Biodiversity Records"
+    year: 2012
+    volume: 5
+    pages: "e82"
+    doi: "10.1017/S1755267212000395"
+  - id: "wang2013"
+    type: "article"
+    authors: ["Wang Z", "Fang L", "Shi W", "Wang K", "Wang D"]
+    title: "Whistle characteristics of free-ranging Indo-Pacific humpback dolphins (Sousa chinensis) in Sanniang Bay, China"
+    journal: "The Journal of the Acoustical Society of America"
+    year: 2013
+    volume: 133
+    pages: "2479–2489"
+    doi: "10.1121/1.4794390"
+  - id: "yuan2021"
+    type: "article"
+    authors: ["Yuan J", "Wang Z", "Duan P", "Xiao Y", "Zhang H", "Huang Z", "Zhou R", "Wen H", "Wang K", "Wang D"]
+    title: "Whistle signal variations among three Indo-Pacific humpback dolphin populations in the South China Sea: a combined effect of the Qiongzhou Strait’s geographical barrier function and local ambient noise?"
+    journal: "Integrative Zoology"
+    year: 2021
+    volume: 16
+    pages: "499–511"
+    doi: "10.1111/1749-4877.12531"
+---
+
+
+::section{#introduction}
+::meta
+type: introduction
+summary: "Background on long-beaked common dolphin taxonomy, acoustic communication in dolphins, and motivation for the first whistle characterization study in the Gulf of California"
+::
+
+# Introduction
+
+In the Mexican Pacific, two subspecies of common dolphins are recognized: the
+short-beaked common dolphin (*Delphinus delphis delphis*) with a cosmopolitan
+distribution, and the long-beaked common dolphin (*Delphinus delphis bairdii*)
+with a distribution limited to the Eastern North Pacific (ENP) Ocean
+@cite{braulik2021}, including the Gulf of California @cite{urban2005}. The
+taxonomy of the common dolphin (*Delphinus* sp.) has been historically troubled.
+The Committee of Taxonomy of the Society for Marine Mammalogy considers
+provisionally the long-beaked common dolphins distributed in the ENP as a
+subspecies *D. delphis bairdii*.
+
+Dolphins live in fission–fusion societies and use whistles to communicate during
+social interactions. Whistles can vary in frequency, typically between 1 and
+35 kHz. Whistle parameters of dolphins show intra- and interspecific differences
+and can be used to classify and distinguish species and populations. While studies
+investigating the whistle repertoire of short-beaked common dolphins are relatively
+abundant, only a few have focused on the acoustics of long-beaked common dolphins
+@cite{oswald2007}, none of which were conducted in the Gulf of California.
+
+Here we present the first whistle characterization of long-beaked common dolphins
+from the Gulf of California. The aim of this study is to describe frequencies,
+duration, and modulation parameters of the whistles of long-beaked common dolphins
+encountered in La Paz Bay, and to compare our results with a different population
+inhabiting the Eastern Pacific Ocean @cite{oswald2007}.
+
+::endsection
+
+
+::section{#methods}
+::meta
+type: methods
+summary: "Acoustic data collection in La Paz Bay (November 2020–September 2021), whistle selection and parameter extraction using Raven Pro and Luscinia, and statistical analysis via PERMANOVA and Wilcoxon tests"
+::
+
+# Materials & Methods
+
+Data were collected in La Paz Bay, Gulf of California, Mexico, between November
+2020 and September 2021. Surveys were conducted in daylight hours during calm sea
+conditions (Beaufort scale ≤ 2), with a motorized research vessel (7.3 m long,
+75 HP). Groups of long-beaked common dolphins were recorded with the engine off,
+using a Reson TC4013.1 omnidirectional hydrophone (sensitivity −211 dB Rms ±
+3 dB re 1 V/µPa, 1 Hz to 170 kHz) connected to a preamplifier Reson VP2000
+Voltage EC6081 (50 dB gain, 500 Hz high-pass filter, 50 kHz low-pass filter). A
+Marantz PMD661 (24-bits WAV, sampling rate 96 kHz) was used for recording.
+
+For each recording session the predominant behavior of the group (displayed by
+more than 50% of the dolphins) was recorded using continuous scan sampling method
+@cite{altmann1974}. The behavior was categorized into five mutually exclusive
+behavioral state categories based on dolphin ethograms. The study was fully
+observational and no ethical permit was required.
+
+A total of 270 good quality whistles (non-overlapped and clearly visible in the
+spectrogram) were selected in **Raven Pro** (version 1.5, Cornell University,
+Laboratory of Ornithology). Whistle frequencies and duration were then extracted
+using **Luscinia** software (version 2.16.10.29.01) @cite{lachlan2007}. In
+addition, the number of steps, inflection points, and contour type were visually
+determined for each whistle.
+
+- A **step** was defined as a period of constant frequency between two periods of
+  the same frequency modulation.
+- An **inflection point** was defined as a shift from falling to rising (or rising
+  to falling) contour slope.
+- Each whistle contour was classified into one of six categories @cite{ansmann2007}:
+  upsweep, downsweep, convex, concave, constant frequency, and sine.
+
+## Statistical Analysis
+
+A chi-squared test was used to investigate the relative frequency of occurrence
+of the six contour forms. Due to the non-normal distribution of whistle parameters
+(Shapiro–Wilks, *p* < 0.05), non-parametric tests were used for all further
+analyses.
+
+**PERMANOVA** (Permutational Multivariate Analysis of Variance) was conducted to
+test whether whistle parameters varied among dolphin groups. Variables were
+transformed to $y = \ln(y+1)$ to reduce scale differences. *P* values were
+calculated based on Euclidean distances using 999 permutations. Multilevel pairwise
+post hoc tests with Bonferroni adjustment were performed to calculate differences
+between group pairs.
+
+A **one-sample Wilcoxon test** was used to compare the whistle parameters of
+long-beaked common dolphins from the present study with those recorded in the
+Eastern Pacific Ocean by @cite{oswald2007}.
+
+Statistical tests were performed in R software (version 4.2.1) with RStudio
+interface (version 2022.12.0).
+
+## Recording Effort
+
+::chart{#tbl-recording-effort}
+::title Recording effort per dolphin group
+::interpretation
+Five groups of long-beaked common dolphins were recorded across five field
+sessions between November 2020 and September 2021, totalling 1 hour and 34
+minutes of recording. Group sizes ranged from 80 to 300 individuals. Group V,
+recorded in September 2021, contributed the largest share of whistles (213 out
+of 270, approximately 79%), owing to both the greatest recording effort (38 min
+across 5 recordings) and a group size of 140 dolphins. Groups III and IV were
+recorded on the same date (25 April 2021) but represent distinct encounters.
+Group IV yielded only 3 whistles, the smallest contribution in the dataset,
+possibly reflecting the small recording effort (10 min) and a group size of
+80 individuals. No other dolphin species were present during any recording
+session, ensuring species-specific attribution of all selected whistles.
+::
+| Dolphin group | Date (dd/mm/yyyy) | No. recordings | Recording effort (min) | Group size | No. whistles |
+|---|---|---|---|---|---|
+| I   | 18/11/2020 | 2 | 20 | 150 | 30  |
+| II  | 09/12/2020 | 2 | 16 | 250 | 14  |
+| III | 25/04/2021 | 1 | 10 | 300 | 10  |
+| IV  | 25/04/2021 | 1 | 10 |  80 |  3  |
+| V   | 07/09/2021 | 5 | 38 | 140 | 213 |
+::endchart
+
+::endsection
+
+
+::section{#results}
+::meta
+type: results
+summary: "Descriptive statistics of 270 whistle parameters, dominance of upsweep contour (34.44%), significant intraspecific variation among groups via PERMANOVA, and lower ending frequency, maximum frequency, duration, and inflection points compared to Eastern Pacific population"
+depends_on: ["#methods"]
+::
+
+# Results
+
+The majority of whistles (*n* = 260; 96%) were recorded while dolphins were
+**traveling** (the group moving in a consistent direction with regular surfacing
+intervals). Only during one encounter (*n* = 10; 4%) was the predominant behavior
+**feeding** (the group pursuing prey, sometimes with deep dives).
+
+## Whistle Contours
+
+Out of the six whistle contour categories, the most common was **upsweep**
+(*n* = 93; 34.44%), followed by concave (*n* = 78; 28.89%), downsweep (*n* = 32;
+11.85%), sine (*n* = 27; 10%), convex (*n* = 20; 7.41%), and constant frequency
+(*n* = 20; 7.41%) ($\chi^2$ = 114.13, df = 5, *p* < 0.001).
+
+::chart{#fig-contour-frequency}
+::title Frequency of whistle contours of the long-beaked common dolphin from the Gulf of California
+::interpretation
+The bar chart shows a pronounced dominance of the upsweep contour (~34%) in
+the whistle repertoire of long-beaked common dolphins from La Paz Bay. Concave
+whistles are the second most frequent (~29%), followed by downsweep (~12%), sine
+(~10%), and convex and constant frequency in a tie at ~7% each. The distribution
+is statistically non-uniform (chi-squared test, p < 0.001), indicating a
+species-level preference for rising-frequency vocalizations. This upsweep dominance
+is consistent with other studies on common dolphins that report upsweep accounting
+for approximately 30% of whistle composition, and may be linked to the traveling
+behavior observed in 96% of the recording sessions, as upsweep whistles have been
+associated with social and contact functions in other delphinid species.
+::
+| Whistle contour    | Count (n) | Frequency (%) |
+|--------------------|-----------|---------------|
+| Upsweep            | 93        | 34.44         |
+| Concave            | 78        | 28.89         |
+| Downsweep          | 32        | 11.85         |
+| Sine               | 27        | 10.00         |
+| Convex             | 20        |  7.41         |
+| Constant frequency | 20        |  7.41         |
+::endchart
+
+## Whistle Parameter Descriptive Statistics
+
+Descriptive statistics and comparison with the Eastern Pacific population from
+@cite{oswald2007} are shown in @ref{#tbl-whistle-params}.
+
+::chart{#tbl-whistle-params}
+::title Whistle parameters comparison between long-beaked common dolphin from the Gulf of California and the Eastern Pacific Ocean
+::interpretation
+The Gulf of California population (n = 270) shows a mean maximum frequency of
+14.13 ± 3.71 kHz, slightly lower than the Eastern Pacific population (16.21 ±
+4.94 kHz). Mean minimum frequency is nearly identical between populations
+(8.44 ± 2.58 kHz vs. 8.48 ± 2.70 kHz). Mean whistle duration in the present
+study is 0.44 ± 0.31 s, compared to 0.62 ± 0.34 s in Oswald et al. (2007).
+The coefficient of variation (CV) for modulation parameters is notably high: >100%
+for inflection points (107.61%) and even higher for steps (170.00%), reflecting
+the high plasticity of dolphin whistle modulation. Frequency-related parameters
+show lower CV values (25–40%), indicating comparatively greater consistency in
+spectral features. Parameters marked with * showed statistically significant
+differences between the two populations (One-sample Wilcoxon test, p < 0.001):
+duration, maximum frequency, ending frequency, and number of inflection points.
+No significant differences were found for starting frequency (p = 0.09476) and
+minimum frequency (p = 0.1429).
+::
+::source "Oswald et al. (2007), The Journal of the Acoustical Society of America, 122:587–595"
+| Whistle parameter           | Min   | Max   | Mean ± SD (present study, n=270) | CV (%)  | Mean ± SD (Oswald et al. 2007, n=174) |
+|-----------------------------|-------|-------|----------------------------------|---------|----------------------------------------|
+| Duration (s) *              |  0.05 |  2.17 | 0.44 ± 0.31                      |  70.45  | 0.62 ± 0.34                            |
+| Maximum frequency (kHz) *   |  3.52 | 26.12 | 14.13 ± 3.71                     |  26.26  | 16.21 ± 4.94                           |
+| Minimum frequency (kHz)     |  2.62 | 18.47 |  8.44 ± 2.58                     |  30.57  |  8.48 ± 2.70                           |
+| Frequency range (kHz)       |  0.43 | 19.93 |  5.69 ± 3.40                     |  59.75  | —                                      |
+| Starting frequency (kHz)    |  2.62 | 26.12 | 10.81 ± 4.25                     |  39.32  | 10.87 ± 4.89                           |
+| Ending frequency (kHz) *    |  3.28 | 21.58 | 12.50 ± 3.78                     |  30.24  | 14.46 ± 5.12                           |
+| Peak frequency (kHz)        |  3.00 | 20.55 | 10.46 ± 2.62                     |  25.05  | —                                      |
+| No. of inflection points *  |  0.00 |  8.00 |  0.92 ± 0.99                     | 107.61  |  1.59 ± 3.29                           |
+| No. of steps                |  0.00 |  4.00 |  0.40 ± 0.68                     | 170.00  | —                                      |
+::endchart
+
+::callout{type="note"}
+Parameters marked with * showed statistically significant differences between
+the Gulf of California and the Eastern Pacific populations (One-sample Wilcoxon
+test, *p* < 0.001).
+::endcallout
+
+## Intraspecific Variation Among Groups
+
+Whistle parameters showed significant differences among the five recorded groups
+(F = 4.762, df = 4, *p* = 0.001). Five pairs of groups showed significant
+differences in whistle parameters (see @ref{#tbl-posthoc}). Group IV showed no
+significant differences with any other group, likely due to the very small number
+of whistles analyzed for that group (*n* = 3).
+
+::chart{#tbl-posthoc}
+::title Multilevel post hoc pairwise tests with Bonferroni adjustment of whistle parameters between group pairs
+::interpretation
+Ten pairwise comparisons were conducted between the five dolphin groups. Five
+pairs showed statistically significant differences after Bonferroni adjustment
+(adjusted p < 0.05): I vs III, I vs V, II vs III, II vs V, and III vs V. The
+II vs III comparison shows the largest effect size (R² = 0.2206), suggesting
+the greatest divergence in whistle characteristics between those two groups.
+Groups involving Group IV showed no significant differences with any other
+group, consistent with the low whistle sample from that encounter (n = 3),
+which limits statistical power. The intraspecific variation observed is
+consistent with the fission-fusion social structure of this species, wherein
+dolphins may adapt their whistles continuously to changing biotic and abiotic
+environments.
+::
+| Group pairs | R²          | p     | p adjusted |
+|-------------|-------------|-------|------------|
+| I vs II     | 0.023576317 | 0.402 | 1.00       |
+| I vs IV     | 0.057779319 | 0.112 | 1.00       |
+| I vs III    | 0.143076262 | 0.001 | 0.01 *     |
+| I vs V      | 0.037041288 | 0.001 | 0.01 *     |
+| II vs IV    | 0.125803616 | 0.067 | 0.67       |
+| II vs III   | 0.220604483 | 0.001 | 0.01 *     |
+| II vs V     | 0.022609014 | 0.003 | 0.03 *     |
+| IV vs III   | 0.132934612 | 0.153 | 1.00       |
+| IV vs V     | 0.003419664 | 0.524 | 1.00       |
+| III vs V    | 0.020883659 | 0.004 | 0.04 *     |
+::endchart
+
+## Comparison with Eastern Pacific Population
+
+The whistles recorded in the present study showed significantly lower values than
+those from @cite{oswald2007} for four parameters:
+
+- Ending frequency (V = 8,582, *p* < 0.001)
+- Maximum frequency (V = 7,786, *p* < 0.001)
+- Duration (V = 7,142, *p* < 0.001)
+- Number of inflection points (V = 3,378, *p* < 0.001)
+
+No significant differences were found for starting frequency (V = 16,607,
+*p* = 0.09476) or minimum frequency (V = 16,921, *p* = 0.1429).
+
+::endsection
+
+
+::section{#discussion}
+::meta
+type: discussion
+summary: "Interpretation of whistle parameter variability, contour dominance, intraspecific group differences, and comparison with Eastern Pacific population in the context of dolphin social structure and acoustic plasticity"
+depends_on: ["#results", "#methods"]
+::
+
+# Discussion
+
+This study represents the first whistle characterization of long-beaked common
+dolphin from the Gulf of California. Group sizes of the encounters ranged from
+80 to 300 individuals (mean: 184 dolphins), consistent with @cite{oswald2021b},
+who also reported large groups exceeding 100 individuals.
+
+The whistles of the recorded long-beaked common dolphins spanned from 2.62 kHz
+to 26.12 kHz in frequency, with durations ranging from 0.05 s to 2.17 s. The
+coefficients of variation (CV) for modulation parameters (inflection points and
+steps) exceeded 100%, indicating high variability in modulation patterns. This
+high CV for modulation alongside low CV for frequencies and duration has been
+previously reported in *Delphinus* sp. and other dolphin species, and may reflect
+the influence of social or ecological factors.
+
+## Contour Dominance
+
+The upsweep contour was the most commonly recorded, consistent with other studies
+on common dolphins where upsweep accounts for approximately 30% of whistle
+composition @cite{ansmann2007} @cite{pagliani2022}. The biological meaning of
+different contour types is not yet fully understood, but appears linked to
+behavioral context. Upsweep whistles have been associated with social behavior in
+bottlenose dolphins, while sine whistles appear more associated with traveling.
+In the present study, 96% of whistles were recorded during traveling behavior,
+making the upsweep dominance a potentially informative signal for future
+behavioral studies in this population.
+
+## Intraspecific Variation
+
+The intraspecific variation among groups could be attributable to the fission–fusion
+social structure of the species @cite{tyack1986}. In such fluid societies, higher
+repertoire variation can be expected as dolphins adapt their acoustic output to
+changing biotic and abiotic environments. Additionally, the unequal number of
+whistles per group (ranging from 3 to 213) may have contributed to the observed
+statistical differences; a more homogeneous sample per group would be needed to
+fully assess intraspecific variation.
+
+## Comparison with the Eastern Pacific Population
+
+The significant differences in ending frequency, maximum frequency, duration, and
+inflection points between the Gulf of California population and the Eastern Pacific
+population of @cite{oswald2007} are consistent with the high plasticity of dolphin
+whistles documented at both interspecific and intraspecific levels. Factors such as
+geographical isolation, local ambient noise, behavioral state, group size, and
+social context may all contribute to this divergence.
+
+Characterizing whistle parameters of the long-beaked common dolphin, together with
+those of the oceanic ecotype of common bottlenose dolphin in the same area
+@cite{antichi2023}, will eventually support acoustic species identification using
+passive acoustic monitoring. A preliminary analysis suggests the two species can
+be distinguished based on the lower duration and frequency range of the long-beaked
+common dolphin. Further comparative studies combining frequency parameters and
+whistle contour categories will be required.
+
+::endsection
+
+
+::section{#conclusions}
+::meta
+type: conclusion
+summary: "First whistle characterization of long-beaked common dolphins from the Gulf of California, confirming acoustic differences from the Eastern Pacific population and outlining implications for passive acoustic monitoring and conservation"
+depends_on: ["#discussion"]
+::
+
+# Conclusions
+
+This study presents the first whistle characterization of long-beaked common
+dolphins from the Gulf of California, contributing to filling the knowledge gap
+for this poorly studied species and providing important information for future
+taxonomic studies.
+
+Key findings are:
+
+1. Whistles produced by long-beaked common dolphins from the Gulf of California
+   differ significantly from those recorded in the Eastern Pacific Ocean in
+   ending frequency, maximum frequency, duration, and number of inflection points.
+2. The upsweep contour was the most common whistle type (34.44%), consistent with
+   other *Delphinus* populations.
+3. Modulation parameters showed high coefficients of variation (>100%), reflecting
+   the acoustic plasticity typical of fission–fusion societies.
+4. Significant intraspecific variation was detected among the five recorded groups.
+
+Future comparison of whistle parameters and contours between the long-beaked common
+dolphin and the oceanic ecotype of common bottlenose dolphin in the study area may
+enable acoustic identification through passive acoustic monitoring, which would be
+crucial for designing more focused conservation actions.
+
+::endsection
+
+
+::section{#funding}
+::meta
+type: appendix
+summary: "Funding sources, grant disclosures, competing interests, author contributions, and field study permits"
+::
+
+# Additional Information and Declarations
+
+## Funding
+
+This research was part of the PhD program of Simone Antichi conducted at the UABCS
+(Universidad Autónoma de Baja California Sur). The PhD scholarship to Simone Antichi
+is provided by the Consejo Nacional de Ciencia y Tecnología (CONACyT) of Mexico
+(Grant number 759498). The fieldwork activities were financed by internal funds of
+the UABCS. The funders had no role in study design, data collection and analysis,
+decision to publish, or preparation of the manuscript.
+
+## Competing Interests
+
+The authors declare there are no competing interests.
+
+## Author Contributions
+
+- **Óscar Carlón-Beltrán**: performed the experiments, analyzed the data, prepared
+  figures and/or tables, authored or reviewed drafts of the article, and approved
+  the final draft.
+- **Lorena Viloria-Gómora**: conceived and designed the experiments, performed the
+  experiments, authored or reviewed drafts of the article, and approved the final
+  draft.
+- **Jorge Urbán R.**: conceived and designed the experiments, authored or reviewed
+  drafts of the article, and approved the final draft.
+- **Sergio Martínez-Aguilar**: conceived and designed the experiments, performed
+  the experiments, authored or reviewed drafts of the article, and approved the
+  final draft.
+- **Simone Antichi**: conceived and designed the experiments, performed the
+  experiments, analyzed the data, prepared figures and/or tables, authored or
+  reviewed drafts of the article, and approved the final draft.
+
+## Field Study Permissions
+
+The research was conducted with the permit issued by the Secretariat of Environment
+and Natural Resources of Mexico (SEMARNAT) (Permit SGPA/DGVS/00657/21).
+
+::annotation
+Data availability: The dolphin ethogram, raw data, and the R script used for the
+analysis are available in the Supplementary Files at
+https://doi.org/10.7717/peerj.15687#supplemental-information
+::endannotation
+
+::endsection

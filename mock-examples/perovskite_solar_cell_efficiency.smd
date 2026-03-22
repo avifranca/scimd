@@ -1,0 +1,123 @@
+---smd
+title: "Efficiency analysis of Perovskite solar cells under varying humidity conditions"
+authors:
+  - name: "Dr. Kenji Tanaka"
+    affiliation: "Department of Applied Physics, Tokyo Institute of Technology"
+    email: "tanaka.k@titech.ac.jp"
+    corresponding: true
+  - name: "Mei Lin"
+    affiliation: "School of Materials Science, Tsinghua University"
+version: "0.1.0"
+lang: "en"
+date: "2026-03-20"
+license: "MIT"
+keywords: ["Perovskite", "Solar Cells", "Photovoltaics", "Humidity Stability", "Energy Harvesting"]
+abstract: |
+  Perovskite solar cells (PSCs) have shown remarkable progress in Power Conversion 
+  Efficiency (PCE) but remain sensitive to environmental moisture. This study 
+  examine the degradation kinetics of MAPbI3-based cells exposed to relative 
+  humidity (RH) levels from 20% to 80%. We find that below 40% RH, the cells 
+  retain 90% of their initial efficiency over 500 hours, whereas at 80% RH, 
+  rapid structural decomposition occurs within 24 hours.
+references:
+  - id: "kojima2009"
+    type: "article"
+    authors: ["Kojima, A.", "Teshima, K.", "Shirai, Y.", "Miyasaka, T."]
+    title: "Organometal Halide Perovskites as Visible-Light Sensitizers for Photovoltaic Cells"
+    journal: "Journal of the American Chemical Society"
+    year: 2009
+  - id: "snaith2013"
+    type: "article"
+    authors: ["Snaith, H. J."]
+    title: "Perovskites: The Emergence of a New Era for Low-Cost, High-Efficiency Solar Cells"
+    journal: "The Journal of Physical Chemistry Letters"
+    year: 2013
+---
+
+::section{#introduction}
+::meta
+type: introduction
+summary: "Overview of Perovskite solar cell advantages and the challenge of moisture-induced degradation."
+::
+
+# Introduction
+
+Methylammonium lead halide perovskites (MAPhI3) have emerged as highly efficient 
+light absorbers for third-generation photovoltaics @cite{kojima2009, snaith2013}. 
+Despite reaching efficiencies over 25%, their commercial viability is 
+limited by long-term stability issues, particularly in humid environments.
+
+::endsection
+
+
+::section{#methods}
+::meta
+type: methods
+summary: "Fabrication of PSCs and description of the controlled humidity aging chambers."
+::
+
+# Experimental Methods
+
+PSCs were fabricated using a standard spin-coating method in a nitrogen-filled 
+glovebox. The cell architecture was FTO/TiO2/MAPbI3/Spiro-OMeTAD/Au. 
+Aging tests were performed in custom-built environmental chambers with 
+controlled humidity ($\pm 2\%$ RH).
+
+::endsection
+
+
+::section{#results}
+::meta
+type: results
+summary: "Degradation data and structural analysis via XRD."
+depends_on: ["#methods"]
+::
+
+# Results and Discussion
+
+The time-resolved Power Conversion Efficiency (PCE) for cells aging at 
+different RH levels is presented below.
+
+::chart{#fig-pce-degradation}
+::title Normalized PCE vs. aging time at various humidity levels
+::interpretation
+The chart clearly indicates a threshold effect at approximately 50% RH. 
+Below this level, degradation is linear and slow. Above 60% RH, an 
+exponential decay in efficiency is observed, coinciding with the 
+formation of PbI2 as confirmed by X-ray diffraction (XRD) patterns.
+::
+| Aging Time (h) | 20% RH PCE | 40% RH PCE | 60% RH PCE | 80% RH PCE |
+|----------------|------------|------------|------------|------------|
+| 0              | 1.00       | 1.00       | 1.00       | 1.00       |
+| 50             | 0.99       | 0.98       | 0.85       | 0.32       |
+| 100            | 0.98       | 0.96       | 0.72       | 0.05       |
+| 250            | 0.95       | 0.92       | 0.40       | 0.00       |
+| 500            | 0.92       | 0.88       | 0.15       | 0.00       |
+::endchart
+
+::equation{#eq-degradation-rate}
+$$
+\eta(t) = \eta_0 \exp(-k_{hum} \cdot t)
+$$
+::label Humidity-dependent efficiency decay model
+::endequation
+
+where $k_{hum}$ is the humidity-dependent degradation constant.
+
+::endsection
+
+
+::section{#conclusion}
+::meta
+type: conclusion
+summary: "Summary of findings and strategies for improving PSC stability."
+depends_on: ["#results"]
+::
+
+# Conclusion
+
+We have quantified the critical humidity thresholds for MAPbI3 solar cells. 
+Encapsulation strategies or the use of 2D/3D hybrid perovskites are 
+necessary for deployment in tropical or high-humidity regions.
+
+::endsection

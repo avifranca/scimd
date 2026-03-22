@@ -1,5 +1,9 @@
 # Private working notes
 docs/
+docs/plans/
+
+# developer tests
+dev/
 
 # Python
 __pycache__/

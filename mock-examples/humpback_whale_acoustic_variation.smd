@@ -1,0 +1,131 @@
+---smd
+title: "Acoustic variation in Humpback Whale (Megaptera novaeangliae) songs in the South Pacific"
+authors:
+  - name: "Dr. Sarah Jenkins"
+    affiliation: "Marine Biology Institute, University of Queensland"
+    email: "s.jenkins@uq.edu.au"
+    corresponding: true
+  - name: "David Attenborough"
+    affiliation: "BBC Natural History Unit"
+version: "0.1.0"
+lang: "en"
+date: "2026-03-20"
+license: "CC-BY-4.0"
+keywords: ["Bioacoustics", "Humpback Whales", "Megaptera novaeangliae", "Song Evolution", "South Pacific"]
+abstract: |
+  Humpback whale songs are known for their complexity and rapid cultural 
+  evolution. This study analyzes acoustic parameters of songs recorded across 
+  three distinct breeding grounds in the South Pacific over a five-year period. 
+  We identify significant differences in phrase duration and frequency range 
+  between eastern and western populations, suggesting limited acoustic 
+  exchange between these regions.
+references:
+  - id: "payne1971"
+    type: "article"
+    authors: ["Payne, R. S.", "McVay, S."]
+    title: "Songs of Humpback Whales"
+    journal: "Science"
+    year: 1971
+  - id: "garland2011"
+    type: "article"
+    authors: ["Garland, E. C.", "Gales, N. J.", "Habron, A. M."]
+    title: "Dynamic Horizontal Cultural Transmission of Humpback Whale Song at the Ocean Basin Scale"
+    journal: "Current Biology"
+    year: 2011
+---
+
+::section{#introduction}
+::meta
+type: introduction
+summary: "Overview of humpback whale song structure and the phenomenon of cultural transmission."
+::
+
+# Introduction
+
+Humpback whales (*Megaptera novaeangliae*) produce complex, stereotyped 
+sequences of vocalizations known as "songs" @cite{payne1971}. These songs 
+evolve rapidly, with all males in a population typically singing the 
+same version at any given time @cite{garland2011}.
+
+This study aims to characterize the regional differences in song parameters 
+within the South Pacific breeding grounds.
+
+::endsection
+
+
+::section{#methods}
+::meta
+type: methods
+summary: "Data collection methods using passive acoustic monitoring (PAM) and song analysis parameters."
+::
+
+# Materials and Methods
+
+Acoustic data were collected using autonomous underwater recorders (SoundTrap 300 HF) 
+deployed at depths of 20-30 meters. Recordings were made at a sampling 
+rate of 48 kHz with a 16-bit resolution.
+
+Song analysis was performed by visually inspecting spectrograms for 
+repeated themes and phrases.
+
+::endsection
+
+
+::section{#results}
+::meta
+type: results
+summary: "Comparison of song parameters between different South Pacific populations."
+depends_on: ["#methods"]
+::
+
+# Results
+
+A total of 450 song units were analyzed across three regions: Australia (East), 
+Fiji, and French Polynesia.
+
+::chart{#tbl-whale-stats}
+::title Descriptive statistics of humpback whale song parameters
+::interpretation
+The data shows that the Australia population has significantly higher 
+maximum frequencies compared to the French Polynesia population. Duration 
+of themes is relatively consistent across all regions, averaging around 35 seconds.
+::
+| Population       | Min Freq (Hz) | Max Freq (Hz) | Phrase Duration (s) | No. Themes |
+|------------------|---------------|---------------|---------------------|------------|
+| Australia (East) | 120           | 4,500         | 8.2                 | 6          |
+| Fiji             | 145           | 3,800         | 7.8                 | 5          |
+| French Polynesia | 110           | 3,200         | 9.1                 | 7          |
+::endchart
+
+::diagram{#fig-song-structure}
+::type flowchart
+::description
+This diagram shows the hierarchical structure of a humpback whale song, from 
+individual units to phrases, themes, and finally the complete song cycle.
+::
+```mermaid
+graph TD
+    A[Unit] --> B[Phrase]
+    B --> C[Theme]
+    C --> D[Song Cycle]
+```
+::enddiagram
+
+::endsection
+
+
+::section{#conclusion}
+::meta
+type: conclusion
+summary: "Implications of the observed acoustic variation for population connectivity."
+depends_on: ["#results"]
+::
+
+# Conclusion
+
+The observed acoustic divergence between western and eastern populations 
+suggests that while cultural transmission is a powerful driver of song 
+change, geographical barriers continue to influence acoustic repertoire 
+diversity in the South Pacific.
+
+::endsection

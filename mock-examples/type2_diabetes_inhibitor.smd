@@ -1,0 +1,124 @@
+---smd
+title: "Efficacy of a novel small molecule inhibitor for Type 2 Diabetes"
+authors:
+  - name: "Dr. Maria Garcia"
+    affiliation: "Department of Endocrinology, Mayo Clinic"
+    email: "garcia.m@mayo.edu"
+    corresponding: true
+  - name: "James Wilson"
+    affiliation: "Wilson Pharmaceuticals"
+version: "0.1.0"
+lang: "en"
+date: "2026-03-20"
+license: "CC-BY-NC-4.0"
+keywords: ["Type 2 Diabetes", "GLP-1", "Small Molecule", "Glucose Homeostasis", "Clinical Trials"]
+abstract: |
+  Current treatments for Type 2 Diabetes often involve frequent injections 
+  or have significant side effects. We report the development and early-phase 
+  testing of WP-450, a potent oral small molecule inhibitor of dipeptidyl 
+  peptidase-4 (DPP-4). In a multi-center randomized controlled trial, 
+  WP-450 significantly reduced HbA1c levels compared to placebo over 12 weeks.
+references:
+  - id: "drucker2006"
+    type: "article"
+    authors: ["Drucker, D. J.", "Nauck, M. A."]
+    title: "The Incretin System: Glucagon-like Peptide-1 Receptor Agonists and Dipeptidyl Peptidase-4 Inhibitors in Type 2 Diabetes"
+    journal: "The Lancet"
+    year: 2006
+  - id: "holst2007"
+    type: "article"
+    authors: ["Holst, J. J."]
+    title: "The Physiology of Glucagon-like Peptide 1"
+    journal: "Physiological Reviews"
+    year: 2007
+---
+
+::section{#introduction}
+::meta
+type: introduction
+summary: "Brief background on the role of the incretin system in glucose regulation and the need for new oral therapies."
+::
+
+# Introduction
+
+The incretin system plays a vital role in maintaining postprandial glucose 
+levels through the action of glucagon-like peptide-1 (GLP-1) and 
+glucose-dependent insulinotropic polypeptide (GIP) @cite{drucker2006, holst2007}. 
+These hormones are rapidly degraded by DPP-4.
+
+::endsection
+
+
+::section{#methods}
+::meta
+type: methods
+summary: "Study design, participant selection, and dosage of the novel inhibitor WP-450."
+::
+
+# Material and Methods
+
+A total of 250 patients with inadequately controlled Type 2 Diabetes (HbA1c 7.5-9.5%) 
+were enrolled. Participants were randomized to receive either 50 mg of 
+WP-450 or a placebo once daily.
+
+::endsection
+
+
+::section{#results}
+::meta
+type: results
+summary: "Clinical outcomes including HbA1c reduction and adverse event reporting."
+depends_on: ["#methods"]
+::
+
+# Results
+
+The primary endpoint was the change in HbA1c from baseline to week 12.
+
+::chart{#tbl-clinical-outcomes}
+::title Primary and secondary clinical endpoints at week 12
+::interpretation
+WP-450 showed a statistically significant reduction in HbA1c (-1.2%) 
+compared to the placebo group (+0.1%). Furthermore, 65% of the WP-450 group 
+achieved the target HbA1c level of <7.0%.
+::
+| Variable | Baseline | Week 12 | Change | p-value |
+|----------|----------|---------|--------|---------|
+| HbA1c (%) - WP-450 | 8.4 | 7.2 | -1.2 | <0.001 |
+| HbA1c (%) - Placebo | 8.3 | 8.4 | +0.1 | 0.45 |
+| Fasting Glucose (mg/dL) - WP-450 | 165 | 135 | -30 | <0.001 |
+| Fasting Glucose (mg/dL) - Placebo | 162 | 164 | +2 | 0.60 |
+::endchart
+
+::figure{#fig-adverse-events}
+::file plot_ae.png
+::description
+This bar chart displays the frequency of the most common adverse events. 
+Treatment-emergent adverse events (TEAEs) include nausea, headache, 
+and nasopharyngitis.
+::
+::interpretation
+The incidence of nausea was slightly higher in the WP-450 group (8%) 
+compared to the placebo group (4%), but was generally mild and 
+did not lead to discontinuation.
+::
+::endfigure
+
+::endsection
+
+
+::section{#discussion}
+::meta
+type: conclusion
+summary: "Summary of clinical efficacy and safety of WP-450."
+depends_on: ["#results"]
+::
+
+# Discussion and Conclusion
+
+The small molecule inhibitor WP-450 is a promising new oral therapy 
+for the management of Type 2 Diabetes. Its efficacy in lowering HbA1c 
+is comparable to existing injectable GLP-1 agonists, with a favorable 
+safety profile.
+
+::endsection
