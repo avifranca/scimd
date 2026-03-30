@@ -1,0 +1,50 @@
+---smd
+title: "Effects of Temperature on Catalyst Performance"
+authors:
+  - name: "María García"
+    orcid: "0000-0002-1234-5678"
+    affiliation: "UNAM"
+version: "0.1.0"
+lang: "es"
+keywords: ["catalysis", "temperature", "kinetics"]
+---
+
+::section{#intro}
+::meta
+type: introduction
+summary: "Overview of temperature effects on heterogeneous catalysis"
+::
+
+# Introduction
+
+The relationship between temperature and catalytic activity follows
+the Arrhenius equation $k = A e^{-E_a / RT}$, where $E_a$ is the
+activation energy and $R$ is the gas constant.
+
+::endsection
+
+::section{#results}
+::meta
+type: results
+summary: "Experimental measurements of conversion rates at 5 temperatures"
+depends_on: ["#methods"]
+::
+
+# Results
+
+::chart{#fig-conversion}
+::interpretation
+Conversion rate increases linearly between 200–350°C, reaching a
+plateau at 89% above 400°C. The inflection point at 350°C suggests
+a change in the rate-limiting step.
+::
+| Temperature (°C) | Conversion (%) | Selectivity (%) |
+|---|---|---|
+| 200 | 23.1 | 95.2 |
+| 250 | 41.7 | 93.8 |
+| 300 | 62.4 | 91.1 |
+| 350 | 78.9 | 87.3 |
+| 400 | 89.2 | 82.6 |
+::endchart
+
+::endsection
