@@ -652,6 +652,28 @@ summary: "Acoustic data collection in La Paz Bay (November 2020–September 2021
 
 # Materials & Methods
 
+::figure{#fig-recording-locations}
+::file papertest/fig1_recording_locations.jpeg
+::description
+Map of La Paz Bay, Gulf of California (24.15°–24.65°N, 110.2°–110.6°W).
+Land in orange-tan, water in light blue. Eleven red circles mark dolphin
+recording locations, clustered in four zones:
+- NW open water: ~24.60°N, 110.50°W (2 points)
+- NE of Espiritu Santo Island: ~24.52°N, 110.40°W (2 points)
+- E channel of Espiritu Santo: ~24.37°N, 110.42°W (5 points, densest cluster)
+- SE open water: ~24.38–24.42°N, 110.20–110.22°W (2 points)
+Inset shows study area location at the southern tip of Baja California peninsula.
+Scale bar: 10 km.
+::
+::interpretation
+Recordings concentrate around Espiritu Santo Island's eastern channel, consistent
+with productive foraging habitat. The dense cluster at ~24.37°N, 110.42°W
+corresponds to Group V (213 of 270 whistles). Spatial coverage across the bay
+supports representativeness of the acoustic dataset within La Paz Bay.
+::
+::source "Generated with QGIS 3.6.3. Base map: CONABIO Mexico shapefile."
+::endfigure
+
 Data were collected in La Paz Bay, Gulf of California, Mexico, between November
 2020 and September 2021. Surveys were conducted in daylight hours during calm sea
 conditions (Beaufort scale ≤ 2), with a motorized research vessel (7.3 m long,
@@ -742,7 +764,7 @@ depends_on: ["#methods"]
 
 The majority of whistles (*n* = 260; 96%) were recorded while dolphins were
 **traveling** (the group moving in a consistent direction with regular surfacing
-intervals). Only during one encounter (*n* = 10; 4%) was the predominant behavior
+intervals). Only du ring one encounter (*n* = 10; 4%) was the predominant behavior
 **feeding** (the group pursuing prey, sometimes with deep dives).
 
 ## Whistle Contours
