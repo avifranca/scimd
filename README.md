@@ -1,5 +1,5 @@
 
-![Banner](imgs/scimd-banner.jpeg)
+![Banner](imgs/scimd-banner.png)
 
 # SciMD — Scientific Markdown for the AI Era
 
@@ -11,42 +11,42 @@
 
 ---
 
-## The Problem: Science Trapped in Print-Era Formats
+## The Problem: Science papers are still focused on print-era formats
 
 The four dominant formats for scientific literature were all designed for *human readers on paper*, not for machines. Each carries a different set of costs when fed to AI systems.
 
-### PDF — The Universal Dead End
+### PDF
+PDF is a page-layout format. in order to use it with LLMs we need to convert it to markdown. When feeding it to an LLM, it will be processed with an OCR as images, not as plain text, so info extraction will rely on the OCR quality. This leads to:
 
-PDF is a page-layout format. When you extract text from it, you get:
-
-- **Broken sentences** at page and column boundaries
-- **Equations rendered as images** — every formula becomes `<!-- formula-not-decoded -->`
-- **Figures without descriptions** — a chart becomes a JPEG filename with no data, no interpretation
-- **Merged bibliography entries** — multi-column layouts fuse references into nonsense strings
-- **Zero structure** — the document is a flat stream of positioned text fragments; sections, abstracts, and captions are indistinguishable
+- **Broken corpus**: pdf document layout may not be completely lineal, so when the OCR reads the document, it may have sections and text mixed on the output
+- **Equations are not parsed**: inline equiations are read as plain text or not processed at all, so they can be lost or very confusing for both humans and machines
+- **Figures are not parsed**: figures are read as images so OCRs can't parse them to text, they are lost on the output file so the model can't use them. This is a big problem for scientific papers where figures are very important for the context.
+- **Charts will have no data**: just the image, so the model can't use them to extract data or understand the context.
+- **Merged bibliography entries**: multi-column layouts fuse references into nonsense strings
+- **Zero structure**: the document is a flat stream of positioned text fragments; sections, abstracts, and captions are indistinguishable
 
 PDF-extracted Markdown scores **4.2/10** in LLM comprehension benchmarks and carries a **High hallucination risk** — models fill the gaps with confabulation.
 
-### XML / JATS — Correct but Expensive
+### XML / JATS
 
 JATS (Journal Article Tag Suite) is the publishing industry standard. It has full metadata, structured sections, and complete bibliographies — but:
 
-- **72% of its bytes are markup**, not content. A single paper exceeds 32,000 tokens, overflowing standard 8K context windows
-- **Schema expertise required** — `<xref ref-type="bibr" rid="b12">` is not natural language
-- **No author interpretation** — figures have captions, but no author-written analysis of what they mean
-- **No dependency graph** — sections have IDs but no declared relationships between them
-- **LLM training cost** — 6.5× more compute per sample than an equivalent parsed SciMD document
+- **72% of its bytes are markup**: not content. A single paper exceeds 32,000 tokens, overflowing standard 8K context windows
+- **Schema expertise required**: `<xref ref-type="bibr" rid="b12">` is not natural language
+- **No author interpretation**: figures have captions, but no author-written analysis of what they mean
+- **No dependency graph**: sections have IDs but no declared relationships between them
+- **LLM training cost**: 6.5× more compute per sample than an equivalent parsed SciMD document
 
-### HTML / LaTeXML — Tag Soup at Scale
+### HTML / LaTeXML
 
 LaTeXML converts LaTeX to HTML. In theory it preserves structure; in practice:
 
-- **MathML for equations** — formulas become dozens of nested XML tags instead of clean LaTeX
-- **Tag density is too high** — `<mi>`, `<mo>`, `<mrow>` tags make up the majority of content; attention mechanisms dilute over markup
-- **Blob structure** — sections run together without clean boundaries, making semantic chunking require XPath expertise
+- **MathML for equations**: formulas become dozens of nested XML tags instead of clean LaTeX
+- **Tag density is too high**: `<mi>`, `<mo>`, `<mrow>` tags make up the majority of content; attention mechanisms dilute over markup
+- **Blob structure**: sections run together without clean boundaries, making semantic chunking require XPath expertise
 - **Not usable as training text** directly — requires complex preprocessing before a model can learn from it
 
-### LaTeX Source — Structural, but Noisy
+### LaTeX Source
 
 LaTeX source files are closer to SciMD than PDF, but:
 
@@ -57,7 +57,7 @@ LaTeX source files are closer to SciMD than PDF, but:
 
 ---
 
-## The Solution: Author-Time Structure for the AI Era
+## The Solution: Author-Time Structure
 
 **SciMD** (`.smd`) resolves these problems at the source — when the author writes the document, not when a converter tries to reverse-engineer it later.
 
@@ -236,7 +236,7 @@ has been the de facto standard for sequence modeling.
 
 ## Benchmark Results
 
-Independent benchmark evaluated by Gemini 2.5 Pro on a real scientific paper (*dolphin whistle characterization, marine biology*), comparing SciMD against JATS XML and PDF-extracted Markdown across every dimension relevant to LLM use.
+Independent benchmark evaluated by Gemini 2.5 Pro on a real scientific paper ([*Dolphin whistle characterization, marine biology*](https://peerj.com/articles/15687)), comparing SciMD against JATS XML and PDF-extracted Markdown across every dimension relevant to LLM use.
 
 **Verdict: SciMD wins for both RAG and fine-tuning.**
 
@@ -485,7 +485,7 @@ scimd/
 
 - [x] v0.1.0 — Core specification
 - [x] v0.2.0 — Reference parser + validator (Python, available as `pyscimd` on PyPI)
-- [ ] v0.3.0 — VS Code extension with live preview
+- [x] v0.3.0 — VS Code extension with live preview
 - [ ] v0.4.0 — Pandoc filter for PDF/HTML/DOCX export
 - [ ] v0.5.0 — LLM training pipeline toolkit
 - [ ] v1.0.0 — Stable specification after community review
@@ -504,4 +504,4 @@ MIT — Use it, fork it, improve it.
 
 ---
 
-*SciMD: Because science deserves better than screenshots of spreadsheets.*
+*SciMD: Science for the AI Era.*
